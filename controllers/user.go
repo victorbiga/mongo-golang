@@ -75,7 +75,7 @@ func (uc OrderController) DeleteOrder(w http.ResponseWriter, r *http.Request, p 
 	oid := bson.ObjectIdHex(id)
 
 	if err := uc.session.DB("mongo-golang").C("orders").RemoveId(oid); err != nil {
-		return
+
 		w.WriteHeader(404)
 	}
 
