@@ -80,5 +80,5 @@ func (uc OrderController) DeleteOrder(w http.ResponseWriter, r *http.Request, p 
 	}
 
 	w.WriteHeader(http.StatusOK)
-	fmt.Fprintf(w, "Order Deleted", oid, "\n")
+	fmt.Fprint(w, "Order Deleted", oid, "\n")
 }
