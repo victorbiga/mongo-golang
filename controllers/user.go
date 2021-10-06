@@ -40,7 +40,7 @@ func (uc OrderController) GetOrder(w http.ResponseWriter, r *http.Request, p htt
 
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
-	fmt.Fprint(w, "%s\n", uj)
+	fmt.Fprintf(w, "%s\n", uj)
 
 }
 
@@ -80,5 +80,5 @@ func (uc OrderController) DeleteOrder(w http.ResponseWriter, r *http.Request, p 
 	}
 
 	w.WriteHeader(http.StatusOK)
-	fmt.Fprint(w, "Order Deleted", oid, "\n")
+	fmt.Fprintf(w, "Order Deleted", oid, "\n")
 }
