@@ -10,3 +10,4 @@ type Order struct {
 	Amount      string        `json:"amount" bson: "amount"`
 	OrderAction string        `json:"orderaction" bson: "orderaction"`
 }
+
